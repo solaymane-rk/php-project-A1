@@ -38,10 +38,10 @@ require_once 'includes/header.php';
         echo "<h3>FIN DE LA COOKIE</h3>";
     }
     
-    echo "<h3>{$accesosCookies}</h3>";
-    echo '<pre>';
-    print_r($_COOKIE);
-    echo '</pre>';
+    // echo "<h3>{$accesosCookies}</h3>";
+    // echo '<pre>';
+    // print_r($_COOKIE);
+    // echo '</pre>';
     ?>
 </main>
 
