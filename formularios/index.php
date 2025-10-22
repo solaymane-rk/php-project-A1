@@ -11,7 +11,7 @@ require_once '../includes/header.php';
         <h1><?= $page_title ?></h1>
         <ol>
             <?php
-                for($i=401; $i <= 407; $i++) {
+                for($i=402; $i <= 407; $i++) {
                     $texto_lista = 'Ejercicio - ' . $i;
                     echo "<li><a href='ejercicios/{$i}.php'>{$texto_lista}</a></li>";
                 }

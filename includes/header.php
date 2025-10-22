@@ -8,8 +8,6 @@ if($current_page == 'inicio') {
     $ruta = $ruta_base2 . '/css/style.css';
 }
 
-echo $ruta_base;
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
