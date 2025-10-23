@@ -12,29 +12,13 @@
     </div>
 </nav> -->
 <?php
-$ruta_base = dirname($_SERVER['PHP_SELF']);
-$ruta_base2 = dirname($_SERVER['PHP_SELF'], 2);
-$ruta_base3 = dirname($_SERVER['PHP_SELF'], 3);
 
-$ruta_inicio = $ruta_base . '/index.php';
-$ruta_inicio2 = $ruta_base2 . '/index.php';
-$ruta_inicio3 = $ruta_base3 . '/index.php';
+const BASE_URL = '/php-0613/A1/project';
 
-$ruta_form = $ruta_base . '/formularios/index.php';
-$ruta_form2 = $ruta_base2 . '/formularios/index.php';
-$ruta_form3 = $ruta_base3 . '/formularios/index.php';
-
-$ruta_cookies = $ruta_base . '/cookies_sesiones/index.php';
-$ruta_cookies2 = $ruta_base2 . '/cookies_sesiones/index.php';
-$ruta_cookies3 = $ruta_base3 . '/cookies_sesiones/index.php';
-
-$ruta_autenticacion = $ruta_base . '/autenticacion/index.php';
-$ruta_autenticacion2 = $ruta_base2 . '/autenticacion/index.php';
-$ruta_autenticacion3 = $ruta_base3 . '/autenticacion/index.php';
-
-// echo $ruta_base . '<br>';
-// echo $ruta_base2 . '<br>';
-// echo $ruta_base3 . '<br>';
+$ruta_inicio = BASE_URL . '/index.php';
+$ruta_form = BASE_URL . '/formularios/index.php';
+$ruta_cookies = BASE_URL . '/cookies_sesiones/index.php';
+$ruta_autenticacion = BASE_URL . '/autenticacion/index.php';
 
 ?>
 <head>
@@ -50,69 +34,21 @@ $ruta_autenticacion3 = $ruta_base3 . '/autenticacion/index.php';
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link <?= ($current_page == 'inicio') ? 'active' : '' ?>"
-            href="
-            <?php
-            if ($current_page == 'inicio') {
-              echo $ruta_inicio;
-            } elseif($current_page == 'ej') {
-              echo $ruta_inicio3;
-            } else echo $ruta_inicio2; 
-            ?>
-            ">Inicio</a>
+          <a class="nav-link <?= ($current_page == 'index') ? 'active' : '' ?>" href="<?= $ruta_inicio ?>">Inicio</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($current_page == 'formularios') ? 'active' : '' ?>"
-            href="
-            <?php
-             if ($current_page == 'formularios') {
-                echo $ruta_form2;
-             } else if($current_page == 'inicio') {
-              echo $ruta_form;
-             } elseif($current_page == 'ej') {
-              echo $ruta_form3;
-             }else {
-              echo $ruta_form2;
-             }
-            ?>
-            ">Ejercicios Formularios</a>
+          <a class="nav-link <?= ($current_page == 'index' || $current_page == 'formularios') ? 'active' : '' ?>" href="<?= $ruta_form ?>">Ejercicios Formularios</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($current_page == 'cookies') ? 'active' : '' ?>"
-            href="
-            <?php
-             if ($current_page == 'cookies') {
-                echo $ruta_cookies2;
-             } else if($current_page == 'inicio') {
-              echo $ruta_cookies;
-             } elseif($current_page == 'ej') {
-              echo $ruta_cookies3;
-             }else {
-              echo $ruta_cookies2;
-             }
-            ?>
-            ">Ejercicios Cookies y Sesiones</a>
+          <a class="nav-link <?= ($current_page == 'cookies_sesiones') ? 'active' : '' ?>" href="<?= $ruta_cookies ?>">Ejercicios Cookies y Sesiones</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($current_page == 'autenticacion') ? 'active' : '' ?>"
-            href="
-            <?php
-             if ($current_page == 'autenticacion') {
-                echo $ruta_autenticacion2;
-             } else if($current_page == 'inicio') {
-              echo $ruta_autenticacion;
-             } elseif($current_page == 'ej') {
-              echo $ruta_autenticacion3;
-             }else {
-              echo $ruta_autenticacion2;
-             }
-            ?>
-            ">Ejercicios Autenticación</a>
+          <a class="nav-link <?= ($current_page == 'autenticacion') ? 'active' : '' ?>" href="<?= $ruta_autenticacion ?>">Ejercicios Autenticación</a>
         </li>
-
+        
       </ul>
     </div>
   </div>
