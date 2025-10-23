@@ -32,14 +32,14 @@ require_once 'includes/header.php';
         setcookie('accesos', ++$accesosCookies);
     }
 
-    setcookie('accesos', '', time() + 10);
+    //setcookie('accesos', '', time() + 10);
 
-    if(empty($_COOKIE['accesos'])) {
-        echo "<h3>FIN DE LA COOKIE</h3>";
-    }
+    // if(empty($_COOKIE['accesos'])) {
+    //     echo "<h3>FIN DE LA COOKIE</h3>";
+    // }
     
     // echo "<h3>{$accesosCookies}</h3>";
-    // echo '<pre>';
+    // echo '<pre>';        
     // print_r($_COOKIE);
     // echo '</pre>';
     ?>
