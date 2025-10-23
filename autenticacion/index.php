@@ -11,8 +11,17 @@ require_once '../includes/header.php';
         <h1><?= $page_title ?></h1>
         <ol>
             <?php
-                for($i=401; $i <= 407; $i++) {
+
+                for($i=413; $i <= 415; $i++) {
                     $texto_lista = 'Ejercicio - ' . $i;
+                    file_put_contents("ejercicios/{$i}.php", <<<PHP
+                        <?php
+                        \$page_title = "Ejercicio Autenticación";
+                        \$current_page = "autenticacion";
+                        require_once '../includes/header.php';
+                        ?>
+                        PHP
+                        );
                     echo "<li><a href='ejercicios/{$i}.php'>{$texto_lista}</a></li>";
                 }
 
